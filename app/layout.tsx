@@ -1,3 +1,35 @@
+export const metadata = {
+  title: "Aviator Global Holdings, LLC",
+  description:
+    "A private real-estate holding and investment company based in Virginia Beach.",
+  metadataBase: new URL("https://aviator.holdings"),
+
+  openGraph: {
+    title: "Aviator Global Holdings, LLC",
+    description:
+      "A private real-estate holding and investment company based in Virginia Beach.",
+    url: "https://aviator.holdings",
+    siteName: "Aviator Global Holdings",
+    images: [
+      {
+        url: "/og-image.jpg", // Replace with your file
+        width: 1200,
+        height: 630,
+        alt: "Aviator Global Holdings, LLC",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Aviator Global Holdings, LLC",
+    description:
+      "A private real-estate holding and investment company based in Virginia Beach.",
+    images: ["/og-image.jpg"],
+  },
+};
 import type React from "react"
 import type { Metadata } from "next"
 import { Inter, Geist_Mono } from "next/font/google"
