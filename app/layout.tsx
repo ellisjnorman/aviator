@@ -18,16 +18,17 @@ export const metadata: Metadata = {
       "A private real-estate holding and investment company based in Virginia Beach.",
     url: "https://www.aviator.holdings",
     siteName: "Aviator Global Holdings",
-  icons: {
-  icon: [
-    { url: "/favicon.ico", sizes: "any" },
-    { url: "/icon-light-32x32.png", media: "(prefers-color-scheme: light)" },
-    { url: "/icon-dark-32x32.png", media: "(prefers-color-scheme: dark)" },
-    { url: "/icon.svg", type: "image/svg+xml" },
-  ],
-  apple: "/apple-touch-icon.png",
-  shortcut: "/favicon.ico",
-},
+    images: [
+      {
+        url: "/og.png",
+        width: 1200,
+        height: 630,
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+
   twitter: {
     card: "summary_large_image",
     title: "Aviator Global Holdings, LLC",
@@ -38,20 +39,13 @@ export const metadata: Metadata = {
 
   icons: {
     icon: [
-      {
-        url: "/icon-light-32x32.png",
-        media: "(prefers-color-scheme: light)",
-      },
-      {
-        url: "/icon-dark-32x32.png",
-        media: "(prefers-color-scheme: dark)",
-      },
-      {
-        url: "/icon.svg",
-        type: "image/svg+xml",
-      },
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon-light-32x32.png", media: "(prefers-color-scheme: light)" },
+      { url: "/icon-dark-32x32.png", media: "(prefers-color-scheme: dark)" },
+      { url: "/icon.svg", type: "image/svg+xml" },
     ],
-    apple: "/apple-icon.png",
+    apple: "/apple-touch-icon.png",
+    shortcut: "/favicon.ico",
   },
 }
 
