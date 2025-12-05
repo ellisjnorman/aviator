@@ -1,21 +1,28 @@
-export const metadata = {
+import type { ReactNode } from "react"
+import type { Metadata } from "next"
+import { Inter, Geist_Mono } from "next/font/google"
+import { Analytics } from "@vercel/analytics/next"
+import "./globals.css"
+
+const _inter = Inter({ subsets: ["latin"] })
+const _geistMono = Geist_Mono({ subsets: ["latin"] })
+
+export const metadata: Metadata = {
   title: "Aviator Global Holdings, LLC",
   description:
     "A private real-estate holding and investment company based in Virginia Beach.",
-  metadataBase: new URL("https://aviator.holdings"),
 
   openGraph: {
     title: "Aviator Global Holdings, LLC",
     description:
       "A private real-estate holding and investment company based in Virginia Beach.",
-    url: "https://aviator.holdings",
+    url: "https://www.aviator.holdings",
     siteName: "Aviator Global Holdings",
     images: [
       {
-        url: "/og-image.jpg", // Replace with your file
+        url: "/og.png",
         width: 1200,
         height: 630,
-        alt: "Aviator Global Holdings, LLC",
       },
     ],
     locale: "en_US",
@@ -27,22 +34,9 @@ export const metadata = {
     title: "Aviator Global Holdings, LLC",
     description:
       "A private real-estate holding and investment company based in Virginia Beach.",
-    images: ["/og-image.jpg"],
+    images: ["/og.png"],
   },
-};
-import type React from "react"
-import type { Metadata } from "next"
-import { Inter, Geist_Mono } from "next/font/google"
-import { Analytics } from "@vercel/analytics/next"
-import "./globals.css"
 
-const _inter = Inter({ subsets: ["latin"] })
-const _geistMono = Geist_Mono({ subsets: ["latin"] })
-
-export const metadata: Metadata = {
-  title: "Aviator Global Holdings, LLC",
-  description: "A private real-estate holding and investment company based in Virginia Beach.",
-  generator: "v0.app",
   icons: {
     icon: [
       {
@@ -62,14 +56,10 @@ export const metadata: Metadata = {
   },
 }
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode
-}>) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <body className={`font-sans antialiased`}>
+      <body className={`${_inter.className} antialiased`}>
         {children}
         <Analytics />
       </body>
