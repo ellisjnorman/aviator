@@ -8,11 +8,13 @@ const inter = Inter({ subsets: ["latin"] })
 const geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
+  // This makes all relative URLs resolve to HTTPS on your custom domain
+  metadataBase: new URL("https://www.aviator.holdings"),
+
   title: "Aviator Global Holdings, LLC",
   description:
     "A private real-estate holding and investment company based in Virginia Beach.",
 
-  // ---- OPEN GRAPH / LINK PREVIEWS ----
   openGraph: {
     title: "Aviator Global Holdings, LLC",
     description:
@@ -21,7 +23,7 @@ export const metadata: Metadata = {
     siteName: "Aviator Global Holdings",
     images: [
       {
-        url: "/og.png", // must be in /public
+        url: "/og.png", // served from /public/og.png
         width: 1200,
         height: 630,
       },
@@ -30,7 +32,6 @@ export const metadata: Metadata = {
     locale: "en_US",
   },
 
-  // ---- TWITTER CARD ----
   twitter: {
     card: "summary_large_image",
     title: "Aviator Global Holdings, LLC",
@@ -39,12 +40,11 @@ export const metadata: Metadata = {
     images: ["/og.png"],
   },
 
-  // ---- ICONS (FAVICON + APPLE TOUCH) ----
   icons: {
     icon: [
-      { url: "/favicon.ico", sizes: "any" },               // Main favicon
-      { url: "/icon-light-32x32.png", media: "(light)" }, // Optional theme icons
-      { url: "/icon-dark-32x32.png", media: "(dark)" },
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon-light-32x32.png", media: "(prefers-color-scheme: light)" },
+      { url: "/icon-dark-32x32.png", media: "(prefers-color-scheme: dark)" },
       { url: "/icon.svg", type: "image/svg+xml" },
     ],
     apple: "/apple-touch-icon.png",
