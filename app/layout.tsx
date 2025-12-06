@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ["latin"] })
 const geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  // This makes all relative URLs resolve to HTTPS on your custom domain
+  // Makes relative URLs resolve correctly on your custom domain
   metadataBase: new URL("https://www.aviator.holdings"),
 
   title: "Aviator Global Holdings, LLC",
@@ -23,9 +23,10 @@ export const metadata: Metadata = {
     siteName: "Aviator Global Holdings",
     images: [
       {
-        url: "/og.png", // served from /public/og.png
+        url: "/og.jpg?v=1", // <-- matches your actual file
         width: 1200,
         height: 630,
+        alt: "Aviator Global Holdings",
       },
     ],
     type: "website",
@@ -37,7 +38,7 @@ export const metadata: Metadata = {
     title: "Aviator Global Holdings, LLC",
     description:
       "A private real-estate holding and investment company based in Virginia Beach.",
-    images: ["/og.png"],
+    images: ["/og.jpg?v=1"], // <-- jpg, with cache-bust
   },
 
   icons: {
